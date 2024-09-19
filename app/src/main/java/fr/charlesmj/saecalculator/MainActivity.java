@@ -13,6 +13,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView solutionTv, resultTv;
@@ -73,12 +76,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(buttonText.equals("=")) {
-            resultTv.setText(solutionTv.getText());
+            String result = getResult(solutionTv.getText().toString());
+            resultTv.setText(result);
             return;
         }
 
         if(buttonText.equals("C")) {
-            dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length()-1);
+            if(dataToCalculate.isEmpty()) {
+                dataToCalculate = dataToCalculate;
+            }else {
+                dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
+            }
+
         }else {
             dataToCalculate = dataToCalculate + buttonText;
         }
@@ -86,7 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         solutionTv.setText(dataToCalculate);
     }
 
-    String getResult(String data){
-        return "Calculated";
+    String getResult(String data) {
+        try {
+            Expression expression = new ExpressionBuilder(data).build();
+            double result = expression.evaluate();
+            return String.valueOf(result);
+        } catch (Exception e) {
+            return "Erreur";
+        }
     }
 }
