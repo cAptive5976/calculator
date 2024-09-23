@@ -101,7 +101,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/button_close_par" />
 
-        <!-- Second Row -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_seven"
             android:layout_width="72dp"
