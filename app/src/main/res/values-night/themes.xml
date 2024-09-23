@@ -2,6 +2,26 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.SAECalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#EADDFF</item>
+        <item name="colorOnPrimary">#21005D</item>
+        <item name="colorPrimaryContainer">#6750A4</item>
+        <item name="colorOnPrimaryContainer">#FFFFFF</item>
+        <item name="colorSecondary">#E8DEF8</item>
+        <item name="colorOnSecondary">#1D192B</item>
+        <item name="colorSecondaryContainer">#625B71</item>
+        <item name="colorOnSecondaryContainer">#FFFFFF</item>
+        <item name="colorTertiary">#FFD8E4</item>
+        <item name="colorOnTertiary">#31111D</item>
+        <item name="colorTertiaryContainer">#7D5260</item>
+        <item name="colorOnTertiaryContainer">#FFFFFF</item>
+        <item name="colorError">#F9DEDC</item>
+        <item name="colorOnError">#410E0B</item>
+        <item name="colorErrorContainer">#B3261E</item>
+        <item name="colorOnErrorContainer">#FFFFFF</item>
+        <item name="android:colorBackground">#1C1B1F</item>
+        <item name="colorOnBackground">#E6E1E5</item>
+        <item name="colorSurface">#1C1B1F</item>
+        <item name="colorOnSurface">#E6E1E5</item>
+        <item name="colorOutline">#938F99</item>
     </style>
 </resources>
